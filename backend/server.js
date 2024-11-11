@@ -38,11 +38,11 @@ app.use('/api/attendance', attendanceRouter);
 app.use('/api/marks', marksRouter);
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.use(express.static(path.join(__dirname, 'client')));
 
 // Handle any requests that don’t match the above routes (for SPA)
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client', 'index.html'));
 });
 
 // Database connection and server start
