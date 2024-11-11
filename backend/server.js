@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path'); // Import path module
+const path = require('path');
 const adminRegister = require(path.join(__dirname, 'router', 'admin-register-router'));
 const createClass = require(path.join(__dirname, 'router', 'create-class-router'));
 const subjectRoute = require(path.join(__dirname, 'router', 'add-subject-router'));
@@ -25,7 +25,7 @@ app.use(cors(corsOption));
 // Middleware
 app.use(express.json());
 
-// Routes
+// API Routes
 app.use('/api/auth', adminRegister);
 app.use('/api/makeclass', createClass);
 app.use('/api/dispclass', createClass);
@@ -36,6 +36,14 @@ app.use('/api/createnotice', noticeRouter);
 app.use('/api/data', noticeRouter);
 app.use('/api/attendance', attendanceRouter);
 app.use('/api/marks', marksRouter);
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client', 'build')));
+
+// Handle any requests that don’t match the above routes (for SPA)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
 
 // Database connection and server start
 connectDb().then(() => {
