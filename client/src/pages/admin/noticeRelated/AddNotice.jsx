@@ -24,7 +24,7 @@ function AddNotice() {
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent page reload
         try {
-            const response = await fetch("/api/createnotice/addnotice", {
+            const response = await fetch("http://localhost:3500/api/createnotice/addnotice", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -23,7 +23,7 @@ function LoginPageAdmin() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("/api/auth/LoginPageAdmin", {
+            const response = await fetch("http://localhost:3500/api/auth/LoginPageAdmin", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

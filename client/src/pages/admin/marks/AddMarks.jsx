@@ -29,7 +29,7 @@ function AddMarks() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("/api/marks/storemarks", {
+            const response = await fetch("http://localhost:3500/api/marks/storemarks", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

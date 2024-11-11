@@ -22,7 +22,7 @@ function ShowClass() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`/api/dispclass/class/delete/${id}`, {
+      const response = await fetch(`http://localhost:3500/api/dispclass/class/delete/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {

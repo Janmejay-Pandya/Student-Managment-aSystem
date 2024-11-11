@@ -14,7 +14,7 @@ function ShowTeacher() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`/api/createteacher/prof/delete/${id}`, {
+      const response = await fetch(`http://localhost:3500/api/createteacher/prof/delete/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {

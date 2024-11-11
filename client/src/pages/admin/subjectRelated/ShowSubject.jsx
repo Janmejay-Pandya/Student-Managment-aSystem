@@ -14,7 +14,7 @@ function ShowSubject() {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`/api/subject/sub/delete/${id}`, {
+            const response = await fetch(`http://localhost:3500/api/subject/sub/delete/${id}`, {
                 method: "DELETE",
             });
             if (response.ok) {

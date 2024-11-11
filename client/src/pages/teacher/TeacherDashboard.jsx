@@ -4,7 +4,7 @@ import TeacherHome from "./TeacherHome";
 import TeacherClassDetails from "./TeacherClassDetails";
 import TeacherViewStudent from "./TeacherViewStudent";
 import TeacherAttendance from "./TeacherAttendance";
-import TeacherNotice from "./Teachernotice";
+import TeacherNotice from "./TeacherNotice";
 import TeacherLogout from "./TeacherLogout";
 import PrivateRoute from "../../PrivateRoute";
 // import PropTypes from "prop-types";

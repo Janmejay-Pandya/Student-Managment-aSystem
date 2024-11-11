@@ -11,7 +11,7 @@ function StudentSubject() {
         if (loggedInStd && loggedInStd.studentclass) {
             console.log("Fetching subjects for class:", loggedInStd.studentclass);
             axios
-                .get(`/api/subject/getsubjectbyclass`, {
+                .get(`http://localhost:3500/api/subject/getsubjectbyclass`, {
                     params: { classId: loggedInStd.studentclass },
                 })
                 .then((response) => {

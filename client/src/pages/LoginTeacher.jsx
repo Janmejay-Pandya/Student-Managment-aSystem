@@ -24,7 +24,7 @@ function LoginTeacher() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/createteacher/LoginTeacher", {
+      const response = await fetch("http://localhost:3500/api/createteacher/LoginTeacher", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

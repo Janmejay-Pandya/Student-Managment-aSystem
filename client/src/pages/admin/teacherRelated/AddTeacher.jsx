@@ -27,7 +27,7 @@ function AddTeacher() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("/api/createteacher/addteacher", {
+            const response = await fetch("http://localhost:3500/api/createteacher/addteacher", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

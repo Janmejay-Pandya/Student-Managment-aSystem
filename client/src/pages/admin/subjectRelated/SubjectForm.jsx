@@ -40,7 +40,7 @@ function SubjectForm() {
         e.preventDefault();
         // console.log(subjectList)
         try {
-            const response = await fetch("/api/subject/subjectform", {
+            const response = await fetch("http://localhost:3500/api/subject/subjectform", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

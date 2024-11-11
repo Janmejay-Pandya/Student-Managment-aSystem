@@ -14,7 +14,7 @@ function ShowNotice() {
     const { notice, setNotice } = useAuth();
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`/api/data/notice/delete/${id}`, {
+            const response = await fetch(`http://localhost:3500/api/data/notice/delete/${id}`, {
                 method: "DELETE",
                 // No headers included if Authorization is not required
             });

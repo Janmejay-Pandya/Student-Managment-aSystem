@@ -102,7 +102,7 @@ function TeacherAttendance() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("/api/attendance/addattendance", {
+            const response = await fetch("http://localhost:3500/api/attendance/addattendance", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

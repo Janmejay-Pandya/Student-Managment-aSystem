@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
     //Display the notices on Show notices
     const getNotices = async () => {
         try {
-            const response = await fetch("/api/data/shownotice", {
+            const response = await fetch("http://localhost:3500/api/data/shownotice", {
                 method: "GET"
             });
             if (response.ok) {
@@ -53,7 +53,7 @@ export const AuthProvider = ({ children }) => {
     //Display all the subjects
     const getAllSubjects = async () => {
         try {
-            const response = await fetch("/api/subject/showsubject", {
+            const response = await fetch("http://localhost:3500/api/subject/showsubject", {
                 method: "GET",
             });
             if (response.ok) {
@@ -69,7 +69,7 @@ export const AuthProvider = ({ children }) => {
     //display all the class present
     const getClass = async () => {
         try {
-            const response = await fetch("/api/dispclass/showclass", {
+            const response = await fetch("http://localhost:3500/api/dispclass/showclass", {
                 method: "GET"
             });
             if (response.ok) {
@@ -90,7 +90,7 @@ export const AuthProvider = ({ children }) => {
     //Display all the students
     const getStudent = async () => {
         try {
-            const response = await fetch("/api/std/dispstudent", {
+            const response = await fetch("http://localhost:3500/api/std/dispstudent", {
                 method: "GET",
             });
             if (response.ok) {
@@ -107,7 +107,7 @@ export const AuthProvider = ({ children }) => {
     //Display Teacher data
     const getTeacher = async () => {
         try {
-            const response = await fetch("/api/createteacher/dispteacher", {
+            const response = await fetch("http://localhost:3500/api/createteacher/dispteacher", {
                 method: "GET",
             });
             if (response.ok) {
@@ -121,7 +121,7 @@ export const AuthProvider = ({ children }) => {
     //Display all marks
     const getAllMarks = async () => {
         try {
-            const response = await fetch("/api/marks/dispmarks", {
+            const response = await fetch("http://localhost:3500/api/marks/dispmarks", {
                 method: "GET",
             });
             if (response.ok) {
@@ -137,7 +137,7 @@ export const AuthProvider = ({ children }) => {
     // JWT Authentication to get the user data currently loggedIn
     const userAuthentication = async () => {
         try {
-            const response = await fetch("/api/auth/logindata", {
+            const response = await fetch("http://localhost:3500/api/auth/logindata", {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -157,7 +157,7 @@ export const AuthProvider = ({ children }) => {
 
     const studentAuth = async () => {
         try {
-            const response = await fetch("/api/std/authstudent", {
+            const response = await fetch("http://localhost:3500/api/std/authstudent", {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -196,7 +196,7 @@ export const AuthProvider = ({ children }) => {
 
     const numberStudent = async () => {
         try {
-            const response = await fetch("/api/std/countstudent", {
+            const response = await fetch("http://localhost:3500/api/std/countstudent", {
                 method: "GET",
             });
             if (response.ok) {

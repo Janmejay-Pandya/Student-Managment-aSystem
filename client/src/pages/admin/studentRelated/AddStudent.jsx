@@ -27,7 +27,7 @@ function AddStudent() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("/api/std/addstudent", {
+            const response = await fetch("http://localhost:3500/api/std/addstudent", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

@@ -12,7 +12,7 @@ function ViewStdAttendance() {
     useEffect(() => {
         if (loggedInStd && loggedInStd.studentclass) {
             axios
-                .get(`/api/subject/getsubjectbyclass`, {
+                .get(`http://localhost:3500/api/subject/getsubjectbyclass`, {
                     params: { classId: loggedInStd.studentclass },
                 })
                 .then((response) => {
@@ -20,7 +20,7 @@ function ViewStdAttendance() {
                     // Fetch present count for each subject
                     response.data.forEach(subject => {
                         axios
-                            .get(`/api/attendance/getpresentcount`, {
+                            .get(`http://localhost:3500/api/attendance/getpresentcount`, {
                                 params: { rollnumber: loggedInStd.stdrollnumber, subject: subject.subject },
                             })
                             .then((countResponse) => {
